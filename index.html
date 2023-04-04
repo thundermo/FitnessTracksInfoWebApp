@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Fitness Walking Tracks Web App</title>
+<title>Fitness Walking Tracks Web App</title>
 
-    <meta charset="UTF-8" http-equiv="Permissions-Policy" content="interest-cohort=()">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+
 </head>
-<div id="language" class="en"></div>
-
+<div id = "language" class="en"></div>
 <body class="w3-light-grey w3-content" style="max-width:900px">
-    <!-- Sidebar/menu -->
-    <nav class="w3-sidebar w3-collapse w3-light-grey w3-animate-left" style="z-index:3;width:200px;" id="Sidebar"><br>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-light-grey w3-animate-left" style="z-index:3;width:200px;" id="Sidebar"><br>
 
-        <div class="w3-bar-block">
+  <div class="w3-bar-block">
 
-            <p class="w3-bar-item w3-padding"><b>District</b><button onclick="w3_close()" class="w3-right text-like-btn" title="close side menu">x</button></p>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('ALL')">ALL</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Southern')">Southern</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Central and Western')">Central and Western</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Wan Chai')">Wan Chai</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Eastern')">Eastern</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Sham Shui Po')">Sham Shui Po</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Yau Tsim Mong')">Yau Tsim Mong</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Kwun Tong')">Kwun Tong</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Kowloon City')">Kowloon City</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Tai Po')">Tai Po</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Sai Kung')">Sai Kung</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Sha Tin Distict')">Sha Tin</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Tuen Mun')">Tuen Mun</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Yuen Long')">Yuen Long</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('North')">North</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Tsuen Wan')">Tsuen Wan</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Kwai Tsing<')">Kwai Tsing</button>
-            <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Islands')">Islands</button>
+    <p class="w3-bar-item w3-padding"><b>District</b><button onclick="w3_close()" class="w3-right text-like-btn" title="close side menu">x</button></p>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('ALL')">ALL</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Southern')">Southern</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Central and Western')">Central and Western</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Wan Chai')">Wan Chai</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Eastern')">Eastern</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Sham Shui Po')">Sham Shui Po</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Yau Tsim Mong')">Yau Tsim Mong</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Kwun Tong')">Kwun Tong</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Kowloon City')">Kowloon City</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Tai Po')">Tai Po</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Sai Kung')">Sai Kung</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Sha Tin Distict')">Sha Tin</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Tuen Mun')">Tuen Mun</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Yuen Long')">Yuen Long</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('North')">North</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Tsuen Wan')">Tsuen Wan</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Kwai Tsing<')">Kwai Tsing</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Islands')">Islands</button>
 
-            <p class="w3-bar-item w3-padding"><b>Language</b></p>
-            <button onclick="window.location.href='index.html';" class="w3-bar-item w3-button w3-padding">English</button>
-            <button onclick="window.location.href='index_zh.html';" class="w3-bar-item w3-button w3-padding">中文</button>
-        </div>
-    </nav>
+    <p class="w3-bar-item w3-padding"><b>Language</b></p>
+    <button onclick="window.location.href='index.html';" class="w3-bar-item w3-button w3-padding">English</button>
+    <button onclick="window.location.href='index_zh.html';" class="w3-bar-item w3-button w3-padding">中文</button>
+  </div>
+</nav>
 
-    <!-- Overlay effect when opening sidebar on small screens -->
-    <div class="w3-overlay  w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="Overlay"></div>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay  w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="Overlay"></div>
 
-    <!-- !PAGE CONTENT! -->
-    <div class="w3-main" style="margin-left:300px">
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
 
-        <!-- Header -->
-        <header id="header">
-            <span class="w3-button w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-            <div class="w3-container" style="position: relative;">
-                <h1><b>Fitness Walking Tracks</b></h1>
-            </div>
-        </header>
+  <!-- Header -->
+  <header id="header">
+    <div  class="w3-top w3-container"></div>
+      <span class="w3-button w3-bar-item w3-xlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+      <div class="w3-top w3-container w3-bar-item" style="position: relative;">
+        <h2 class = "w3-third"><b>Fitness Walking Tracks</b></h2>
+      </div>
     </div>
+  </header>
+</div>
 
-    <div id="trackList" style="overflow-y: scroll; height: 70vh">
+<div id="trackList" style ="overflow-y: scroll; height: 70vh">
 
-    </div>
+</div>
 
-    </div>
+</div>
 </body>
 
+
+<!-- js file-->
+<script src="app.js"></script>
+
+
+</body>
 </html>

@@ -1,28 +1,5 @@
 const webPageLanguage = document.getElementById('language').className;
-console.log('language: '+ webPageLanguage);
-
-function initialize() {
-    if (navigator.onLine) {
-        retrieveTrails();
-    } else {
-        const localStorage = window.localStorage;
-        if (localStorage) {
-            const trails = localStorage.getItem("trails");
-        }
-    }
-}
-
-//read data.json
-const request = new XMLHttpRequest();
-request.open('GET', 'data.json', false); 
-request.send(null);
-
-if (request.status === 200) {
-  var tracksData = JSON.parse(request.responseText);
-  console.log(tracksData);
-} else {
-  console.error('Error:', request.status);
-}
+console.log('language: '+webPageLanguage);
 
 function w3_open() {
     document.getElementById("Sidebar").style.display = "block";
@@ -37,6 +14,17 @@ function showDetail(id) {
 	document.getElementById(id).style.display = (document.getElementById(id).style.display == 'none') ? "block" :"none";
 }
 
+//read data.json
+const request = new XMLHttpRequest();
+request.open('GET', 'data.json', false); 
+request.send(null);
+
+if (request.status === 200) {
+  var tracksData = JSON.parse(request.responseText);
+  console.log(tracksData);
+} else {
+  console.error('Error:', request.status);
+}
 
 tracksData.forEach((track,trackListIndex) => {
     //create elements and set attributes
@@ -115,3 +103,23 @@ function selectDistrict(selectedDistrict){
         })
     }          
 }
+
+//search function
+/*
+function searchTrack(){
+
+    if (selectedDistrict != 'ALL'){
+        tracksData.forEach((track,i) => {            
+            if (track.District_en != selectedDistrict){
+                document.getElementById('track'+i).setAttribute('style','display:none;');
+            }else{
+                document.getElementById('track'+i).setAttribute('style','display:block;');
+            }
+        });
+    }else{
+        tracksData.forEach((track,i) => {
+            document.getElementById('track'+i).setAttribute('style','display:block;');
+        })
+    }          
+}
+*/
