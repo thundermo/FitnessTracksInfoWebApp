@@ -33,7 +33,7 @@ for(let trackListIndex=0;trackListIndex<20;trackListIndex++){
 
   let trackDiv = document.createElement('div');
   trackDiv.setAttribute('id', 'track' + trackListIndex);
-  trackDiv.setAttribute('class' ,'w3-container w3-margin-bottom w3-white');  
+  trackDiv.setAttribute('class' ,'w3-container w3-margin-bottom w3-sand');  
   
   let TrackDetailDiv = document.createElement('div');
   TrackDetailDiv.setAttribute('id', 'trackDetail' + trackListIndex);
@@ -48,13 +48,15 @@ for(let trackListIndex=0;trackListIndex<20;trackListIndex++){
   pTrackTile.setAttribute('herf', '#track' + trackListIndex);
   pTrackTile.addEventListener('click', function(){
     showDetail('trackDetail'+trackListIndex);
-    document.getElementById('showDetailArrow' + trackListIndex).innerHTML = (document.getElementById('showDetailArrow' + trackListIndex).innerHTML == '˅ ')?'˄ ':'˅ ';
-    document.getElementById('track' + trackListIndex).scrollIntoView({ behavior: 'smooth' });
-  });
+    if  (document.getElementById('showDetailArrow' + trackListIndex).innerHTML == '˅ '){
+       document.getElementById('showDetailArrow' + trackListIndex).innerHTML = '˄ ';
+       document.getElementById('track' + trackListIndex).scrollIntoView({ behavior: 'smooth' });
+    }else{
+        document.getElementById('showDetailArrow' + trackListIndex).innerHTML = '˅ ';
+    };
+});
 
   let bTrackTitle = document.createElement('b');
-
-  
   
   let pTrack = document.createElement('p');
   pTrack.innerHTML = 'Total Track Length: 1200 m<br>Calories consumed: 50-60 Cal';
@@ -68,11 +70,11 @@ for(let trackListIndex=0;trackListIndex<20;trackListIndex++){
   bTrackTitle.appendChild(showDetailArrow);
   bTrackTitle.appendChild(document.createTextNode('Ap Lei Chau Wind Tower Park test'));
   pTrackTile.appendChild(bTrackTitle);
+  trackDiv.appendChild(pTrackTile);
   TrackDetailDiv.appendChild(pTrack);
   TrackDetailDiv.appendChild(pTrackDetai);
-  TrackDetailDiv.appendChild(img);
-  pTrackTile.appendChild(TrackDetailDiv);
-  trackDiv.appendChild(pTrackTile);
+  TrackDetailDiv.appendChild(img);  
+  trackDiv.appendChild(TrackDetailDiv);
   div.appendChild(trackDiv)
   document.getElementById('trackList').appendChild(div);  
   
