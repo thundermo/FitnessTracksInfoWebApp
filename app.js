@@ -15,9 +15,13 @@ function showDetail(id) {
 //read data.json
 fetch('data.json')
   .then(response => response.json())
-  .then(data => console.log(data))
+  .then(data => {
+    // Store the data as an object
+    const tracksData = data;
+    console.log(tracksData);
+    // Use the data as an object
+  })
   .catch(error => console.error(error));
-
 
 
 
@@ -34,8 +38,8 @@ fetch('data.json')
     </div>
 */
 //append track list block to html
-for(let trackListIndex=0;trackListIndex<20;trackListIndex++){
-
+trackListIndex = 0;
+tracksData.forEach(track => {  
   let div = document.createElement('div');
   div.setAttribute('class' ,'w3-rest w3-container');
 
@@ -86,4 +90,5 @@ for(let trackListIndex=0;trackListIndex<20;trackListIndex++){
   div.appendChild(trackDiv)
   document.getElementById('trackList').appendChild(div);  
   
-}
+  trackListIndex++;
+});
