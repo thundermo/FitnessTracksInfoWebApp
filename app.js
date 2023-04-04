@@ -8,19 +8,8 @@ function initialize() {
         const localStorage = window.localStorage;
         if (localStorage) {
             const trails = localStorage.getItem("trails");
-            if (trails) {
-                displayTrails(JSON.parse(trails));
-            }
         }
     }
-}
-
-function displayTrails(trails) {
-    trails.forEach(show);
-}
-
-function show(trails) {
-	
 }
 
 function retrieveTrails() {
