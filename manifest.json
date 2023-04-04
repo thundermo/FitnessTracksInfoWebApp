@@ -1,7 +1,6 @@
 {
     "name": "Fitness Walking Tracks Web App",
     "short_name": "Walking Tracks HK",
-    "start_url": "/",
     "display": "standalone",
     "icons": [
       {
