@@ -20,12 +20,12 @@ function displayTrails(trails) {
 }
 
 function retrieveTrails() {
-	const request = new XMLHttpRequest();
+	const xhr = new XMLHttpRequest();
 	const url = "data.json";
 	
-	request.onreadystatechange = function() {
-		if (request.readyState === 4) {
-			var trails = JSON.parse(request.response).trails;
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState === 4) {
+			var trails = JSON.parse(xhr.response).trails;
 			displayTrails(trails);
 			
 			const localStorage = window.localStorage;
@@ -35,8 +35,8 @@ function retrieveTrails() {
 		}
 	};
 	
-	request.open("get", url);
-	request.send();
+	xhr.open("get", url);
+	xhr.send();
 }
 
 function w3_open() {
@@ -52,6 +52,7 @@ function showDetail(id) {
 	document.getElementById(id).style.display = (document.getElementById(id).style.display == 'none') ? "block" :"none";
 }
 
+/*
 tracksData.forEach((track,trackListIndex) => {
     //create elements and set attributes
     let div = document.createElement('div');
@@ -112,7 +113,7 @@ tracksData.forEach((track,trackListIndex) => {
     div.appendChild(trackDiv)
     document.getElementById('trackList').appendChild(div); 
 });
-
+*/
 //control the display of the track div blocks 
 function selectDistrict(selectedDistrict){
     if (selectedDistrict != 'ALL'){
