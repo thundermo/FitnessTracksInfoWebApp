@@ -1,6 +1,20 @@
 const webPageLanguage = document.getElementById('language').className;
 console.log('language: '+webPageLanguage);
 
+function initialize() {
+    if (navigator.onLine) {
+        retrieveContacts();
+    } else {
+        const localStorage = window.localStorage;
+        if (localStorage) {
+            const trails = localStorage.getItem("trails");
+            if (trails) {
+                displayTrails(JSON.parse(trails));
+            }
+        }
+    }
+}
+
 function w3_open() {
     document.getElementById("Sidebar").style.display = "block";
     document.getElementById("Overlay").style.display = "block";
