@@ -12,18 +12,19 @@ function showDetail(id) {
 
 }
 
-let tracksData;
+
 //read data.json
-fetch('data.json')
-  .then(response => response.json())
-  .then(data => {
-    // Store the data as an object
-    tracksData = data;
-    console.log('inside loop:',tracksData);
-    // Use the data as an object
-  })
-  .catch(error => console.error(error));
-  console.log('outside loop:',tracksData);
+
+async function getJSON(){
+    return fetch('data.json')
+            .then((response) => response.json())
+            .then((data) => {return data;})
+            .catch((error) => console.error(error));
+}
+
+const tracksData = await this.getJSON();
+console.log(tracksData);            
+
 
 /*  the append elements in html code:
     <div class="w3-third w3-container">
@@ -38,7 +39,7 @@ fetch('data.json')
     </div>
 */
 //append track list block to html
-tracksData.forEach(track,trackListIndex => {  
+tracksData.forEach((track,trackListIndex) => {  
   let div = document.createElement('div');
   div.setAttribute('class' ,'w3-rest w3-container trackDiv');
   div.setAttribute('id', 'track' + trackListIndex);
@@ -93,7 +94,7 @@ tracksData.forEach(track,trackListIndex => {
 
 function selectDistrict(selectedDistrict){
     if(selectedDistrict != 'all'){
-        tracksData.District_en.forEach(trackDistrict,i => { 
+        tracksData.District_en.forEach((trackDistrict,i) => { 
             if (trackDistrict != selectedDistrict){
                 document.getElementById('track'+i).setAttribute('style','display:none;');
             }
