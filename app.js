@@ -12,24 +12,16 @@ function initialize() {
     }
 }
 
-function retrieveTrails() {
-	const xhr = new XMLHttpRequest();
-	const url = "data.json";
-	
-	xhr.onreadystatechange = function() {
-		if (xhr.readyState === 4) {
-			var trails = JSON.parse(xhr.response).trails;
-			displayTrails(trails);
-			
-			const localStorage = window.localStorage;
-            		if (localStorage) {
-                		localStorage.setItem("trails", JSON.stringify(trails));
-			}
-		}
-	};
-	
-	xhr.open("get", url);
-	xhr.send();
+//read data.json
+const request = new XMLHttpRequest();
+request.open('GET', 'data.json', false); 
+request.send(null);
+
+if (request.status === 200) {
+  var tracksData = JSON.parse(request.responseText);
+  console.log(tracksData);
+} else {
+  console.error('Error:', request.status);
 }
 
 function w3_open() {
