@@ -12,12 +12,13 @@ function showDetail(id) {
 
 }
 
+var tracksData
 //read data.json
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
     // Store the data as an object
-    const tracksData = data;
+    tracksData = data;
     console.log(tracksData);
     // Use the data as an object
   })
