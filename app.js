@@ -57,18 +57,19 @@ tracksData.forEach((track,trackListIndex) => {
 
     let bTrackTitle = document.createElement('b');
     let pTrack = document.createElement('p');
+    pTrack.setAttribute('style','font-weight: bold')
     let pTrackDetai = document.createElement('p');
     let trackTitle;
     let img = document.createElement('img');
     img.style.width = '100%';
     //change content base on the language selected
     if (webPageLanguage == 'en'){
-        pTrack.innerHTML = track.Route_en;
+        pTrack.innerHTML = track.District_en;
         pTrackDetai.innerHTML = track.HowToAccess_en;
         trackTitle = document.createTextNode(track.Title_en);
         img.src = track.MapURL_en;
     }else if (webPageLanguage == 'tc'){
-        pTrack.innerHTML = track.Route_tc;
+        pTrack.innerHTML = track.District_tc;
         pTrackDetai.innerHTML = track.HowToAccess_tc;
         trackTitle = document.createTextNode(track.Title_tc);
         img.src = track.MapURL_tc;
