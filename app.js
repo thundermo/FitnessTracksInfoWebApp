@@ -16,7 +16,11 @@ function initialize() {
 }
 
 function displayTrails(trails) {
-    window.alert("HELLO WORLD");
+    trails.forEach(show);
+}
+
+function show(trails) {
+	
 }
 
 function retrieveTrails() {
@@ -52,7 +56,7 @@ function showDetail(id) {
 	document.getElementById(id).style.display = (document.getElementById(id).style.display == 'none') ? "block" :"none";
 }
 
-/*
+
 tracksData.forEach((track,trackListIndex) => {
     //create elements and set attributes
     let div = document.createElement('div');
@@ -113,7 +117,7 @@ tracksData.forEach((track,trackListIndex) => {
     div.appendChild(trackDiv)
     document.getElementById('trackList').appendChild(div); 
 });
-*/
+
 //control the display of the track div blocks 
 function selectDistrict(selectedDistrict){
     if (selectedDistrict != 'ALL'){
