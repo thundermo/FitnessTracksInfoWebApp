@@ -17,7 +17,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_01.jpg",
             "Latitude": 22.24472222,
             "Longitude": 114.1525,
-            "Image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Ap_Lei_Chau_Wind_Tower_Park.JPG"
+            "Image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Ap_Lei_Chau_Wind_Tower_Park.JPG",
+            "gMap": " "
         },
         {
             "Title_en": "Sun Yat Sen Memorial Park to Central Pier No.7",
@@ -37,7 +38,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_02.jpg",
             "Latitude": 22.290402,
             "Longitude": 114.143783,
-            "Image": "https://www.lcsd.gov.hk/en/parks/sysmp/common/graphics/fac/reflecting.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/sysmp/common/graphics/fac/reflecting.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Hong Kong Park",
@@ -57,7 +59,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_03.jpg",
             "Latitude": 22.27714,
             "Longitude": 114.163813,
-            "Image": "https://www.lcsd.gov.hk/en/parks/hkp/common/graphics/hkp_photo.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/hkp/common/graphics/hkp_photo.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Wan Chai Park",
@@ -77,7 +80,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_04.jpg",
             "Latitude": 22.275472,
             "Longitude": 114.176008,
-            "Image": "https://littlemonkey.hk/wp-content/uploads/2018/05/OP-035_1DaHulk.jpg"
+            "Image": "https://littlemonkey.hk/wp-content/uploads/2018/05/OP-035_1DaHulk.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Bowen Road",
@@ -97,7 +101,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_05.jpg",
             "Latitude": 22.272853,
             "Longitude": 114.166083,
-            "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Bowen_Road_Fitness_Trail.jpg/580px-Bowen_Road_Fitness_Trail.jpg"
+            "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Bowen_Road_Fitness_Trail.jpg/580px-Bowen_Road_Fitness_Trail.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Quarry Bay Park",
@@ -117,7 +122,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_06.jpg",
             "Latitude": 22.287855,
             "Longitude": 114.222554,
-            "Image": "https://www.lcsd.gov.hk/en/parks/qbp/common/graphics/slideshow/01.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/qbp/common/graphics/slideshow/01.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Lai Chi Kok Park",
@@ -137,7 +143,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_07.jpg",
             "Latitude": 22.33944444,
             "Longitude": 114.13694444,
-            "Image": "https://www.lcsd.gov.hk/en/parks/lckp/common/graphics/slideshow/08.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/lckp/common/graphics/slideshow/08.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Kowloon Park",
@@ -157,7 +164,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_08.jpg",
             "Latitude": 22.301593,
             "Longitude": 114.170116,
-            "Image": "https://www.lcsd.gov.hk/en/parks/kp/common/graphics/slideshow/05.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/kp/common/graphics/slideshow/05.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Tsim Sha Tsui Promenade",
@@ -177,7 +185,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_09.jpg",
             "Latitude": 22.293123,
             "Longitude": 114.174814,
-            "Image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Tsim_Sha_Tsui_Promenade_201508.jpg"
+            "Image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Tsim_Sha_Tsui_Promenade_201508.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Po Kong Village Road Park",
@@ -197,7 +206,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_10.jpg",
             "Latitude": 22.343673,
             "Longitude": 114.204487,
-            "Image": "https://uploads-ssl.webflow.com/574475e86ccba3d37a1710f5/5959aefc42bf8a0b219ccbf7_park.jpg"
+            "Image": "https://uploads-ssl.webflow.com/574475e86ccba3d37a1710f5/5959aefc42bf8a0b219ccbf7_park.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Ngau Chi Wan Park",
@@ -217,7 +227,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_11.jpg",
             "Latitude": 22.337411,
             "Longitude": 114.21406,
-            "Image": "https://www.lcsd.gov.hk/en/parks/ncwp/common/graphics/bg.png"
+            "Image": "https://www.lcsd.gov.hk/en/parks/ncwp/common/graphics/bg.png",
+            "gMap": " "
         },
         {
             "Title_en": "Laguna Park",
@@ -237,7 +248,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_12.jpg",
             "Latitude": 22.308201,
             "Longitude": 114.227894,
-            "Image": "https://www.freeguider.com/upload/venues/1483/big/bc061aed1b72b75738cdde7686625782.JPG"
+            "Image": "https://www.freeguider.com/upload/venues/1483/big/bc061aed1b72b75738cdde7686625782.JPG",
+            "gMap": " "
         },
         {
             "Title_en": "Jordan Valley Park",
@@ -257,7 +269,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_13.jpg",
             "Latitude": 22.330161,
             "Longitude": 114.221578,
-            "Image": "https://www.lcsd.gov.hk/en/parks/jvp/common/graphics/slideshow/01.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/jvp/common/graphics/slideshow/01.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Kowloon Tsai Park",
@@ -277,7 +290,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_14.jpg",
             "Latitude": 22.331287,
             "Longitude": 114.18432,
-            "Image": "https://www.lcsd.gov.hk/en/parks/ktsp/common/graphics/slideshow/01.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/ktsp/common/graphics/slideshow/01.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Kowloon Walled City Park \n& Carpenter Road Park",
@@ -297,7 +311,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_15.jpg",
             "Latitude": 22.330991,
             "Longitude": 114.192113,
-            "Image": "https://www.lcsd.gov.hk/en/parks/kwcp/common/graphics/slideshow/01.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/kwcp/common/graphics/slideshow/01.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Tai Po Waterfront Park",
@@ -317,7 +332,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_16.jpg",
             "Latitude": 22.452218,
             "Longitude": 114.179066,
-            "Image": "https://www.lcsd.gov.hk/en/parks/tpwp/common/graphics/slideshow/07.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/tpwp/common/graphics/slideshow/07.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Mui Shue Hang Playground",
@@ -337,7 +353,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_17.jpg",
             "Latitude": 22.450841,
             "Longitude": 114.156727,
-            "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/HK_MuiShueHangPlayground_Sign.JPG/500px-HK_MuiShueHangPlayground_Sign.JPG"
+            "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/HK_MuiShueHangPlayground_Sign.JPG/500px-HK_MuiShueHangPlayground_Sign.JPG",
+            "gMap": " "
         },
         {
             "Title_en": "Sai Kung Promenade",
@@ -357,7 +374,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_18.jpg",
             "Latitude": 22.382621,
             "Longitude": 114.275111,
-            "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Sai_Kung_Waterfront_view_201706.jpg/500px-Sai_Kung_Waterfront_view_201706.jpg"
+            "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Sai_Kung_Waterfront_view_201706.jpg/500px-Sai_Kung_Waterfront_view_201706.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Po Tsui Park",
@@ -377,7 +395,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_19.jpg",
             "Latitude": 22.324348,
             "Longitude": 114.253436,
-            "Image": "https://upload.wikimedia.org/wikipedia/commons/2/21/Po_Tsui_Park_Main_Entrance.jpg"
+            "Image": "https://upload.wikimedia.org/wikipedia/commons/2/21/Po_Tsui_Park_Main_Entrance.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Tseung Kwan O Waterfront Park & \nTseung Kwan O Promenade",
@@ -397,7 +416,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_20.jpg",
             "Latitude": 22.302551,
             "Longitude": 114.256391,
-            "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Tseung_Kwan_O_Waterfront_Promenade_View_201408.jpg/1280px-Tseung_Kwan_O_Waterfront_Promenade_View_201408.jpg"
+            "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Tseung_Kwan_O_Waterfront_Promenade_View_201408.jpg/1280px-Tseung_Kwan_O_Waterfront_Promenade_View_201408.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Sha Tin Park",
@@ -417,7 +437,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_21.jpg",
             "Latitude": 22.380079,
             "Longitude": 114.189881,
-            "Image": "https://www.lcsd.gov.hk/en/parks/stp/common/graphics/slideshow/01.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/stp/common/graphics/slideshow/01.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Ma On Shan Park",
@@ -437,7 +458,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_22.jpg",
             "Latitude": 22.427302,
             "Longitude": 114.230445,
-            "Image": "https://www.lcsd.gov.hk/en/parks/mosp/common/graphics/slideshow/04.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/mosp/common/graphics/slideshow/04.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Ma On Shan Promenade",
@@ -457,7 +479,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_23.jpg",
             "Latitude": 22.427023,
             "Longitude": 114.233751,
-            "Image": "https://www.lcsd.gov.hk/en/parks/mospd/common/graphics/bg.png"
+            "Image": "https://www.lcsd.gov.hk/en/parks/mospd/common/graphics/bg.png",
+            "gMap": " "
         },
         {
             "Title_en": "Tuen Mun Park, Wu Shan Riverside Park & \nWu Shan Recreation Playground",
@@ -477,7 +500,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_24.jpg",
             "Latitude": 22.393362,
             "Longitude": 113.973031,
-            "Image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Tuen_Mun_Park_Artificial_Lake_201411.jpg"
+            "Image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Tuen_Mun_Park_Artificial_Lake_201411.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Yuen Long Park",
@@ -497,7 +521,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_25.jpg",
             "Latitude": 22.441016,
             "Longitude": 114.018452,
-            "Image": "https://www.lcsd.gov.hk/en/parks/ylp/common/graphics/slideshow/02.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/ylp/common/graphics/slideshow/02.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Tin Shui Wai Park",
@@ -517,7 +542,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_26.jpg",
             "Latitude": 22.455809,
             "Longitude": 114.001741,
-            "Image": "https://www.lcsd.gov.hk/en/parks/tswp/common/graphics/slideshow/02.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/tswp/common/graphics/slideshow/02.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "North District Park",
@@ -537,7 +563,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_27.jpg",
             "Latitude": 22.499209,
             "Longitude": 114.133649,
-            "Image": "https://www.lcsd.gov.hk/en/parks/ndp/common/graphics/slideshow/02.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/ndp/common/graphics/slideshow/02.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Pak Fuk Tin Sum Playground",
@@ -557,7 +584,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_28.jpg",
             "Latitude": 22.489058,
             "Longitude": 114.140366,
-            "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Fanling_Centre_%28clear_view%29.JPG/1200px-Fanling_Centre_%28clear_view%29.JPG"
+            "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Fanling_Centre_%28clear_view%29.JPG/1200px-Fanling_Centre_%28clear_view%29.JPG",
+            "gMap": " "
         },
         {
             "Title_en": "Shing Mun Valley Park",
@@ -577,7 +605,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_29.jpg",
             "Latitude": 22.373344,
             "Longitude": 114.124687,
-            "Image": "https://www.lcsd.gov.hk/en/parks/smvp/common/graphics/slideshow/01.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/smvp/common/graphics/slideshow/01.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Tsuen Wan Park",
@@ -597,7 +626,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_30.jpg",
             "Latitude": 22.364895,
             "Longitude": 114.112451,
-            "Image": "https://www.lcsd.gov.hk/en/parks/twp/common/graphics/slideshow/02.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/twp/common/graphics/slideshow/02.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Tsing Yi Park",
@@ -617,7 +647,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_31.jpg",
             "Latitude": 22.356678,
             "Longitude": 114.106163,
-            "Image": "https://www.lcsd.gov.hk/en/parks/typ/common/graphics/slideshow/01.jpg"
+            "Image": "https://www.lcsd.gov.hk/en/parks/typ/common/graphics/slideshow/01.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Tsing Yi Promenade",
@@ -637,7 +668,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_32.jpg",
             "Latitude": 22.363127,
             "Longitude": 114.105045,
-            "Image": "https://www.getreadyhk.com/images/stories/blog/hktj-tea2046/tsing_yi_promenade/2018-11-29-20-38-44.jpg"
+            "Image": "https://www.getreadyhk.com/images/stories/blog/hktj-tea2046/tsing_yi_promenade/2018-11-29-20-38-44.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Cheung Chau Sports Ground",
@@ -657,7 +689,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_33.jpg",
             "Latitude": 22.206486,
             "Longitude": 114.032803,
-            "Image": "https://www.lcsd.gov.hk/file_upload_clpss/leisure_facilities/en/common/images/photo/facilities/IL/857_cc02.jpg"
+            "Image": "https://www.lcsd.gov.hk/file_upload_clpss/leisure_facilities/en/common/images/photo/facilities/IL/857_cc02.jpg",
+            "gMap": " "
         },
         {
             "Title_en": "Tung Chung North Park and Man Tung Road Park",
@@ -677,7 +710,8 @@
             "MapURL_sc": "https://www.lcsd.gov.hk/en/sportforall/common/graphics/b5/walk/map_34.jpg",
             "Latitude": 22.292443,
             "Longitude": 113.950924,
-            "Image": "https://www.lcsd.gov.hk/en/parks/tcnp/common/graphics/bg.png"
+            "Image": "https://www.lcsd.gov.hk/en/parks/tcnp/common/graphics/bg.png",
+            "gMap": " "
         }
   ]
 
