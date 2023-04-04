@@ -1,5 +1,5 @@
-const webPageLanguage = document.getElementById('language').className;
-console.log('language: '+webPageLanguage);
+//const webPageLanguage = document.getElementById('language').className;
+//console.log('language: '+webPageLanguage);
 
 function initialize() {
     if (navigator.onLine) {
@@ -13,6 +13,14 @@ function initialize() {
             }
         }
     }
+}
+
+function displayTrails(trails) {
+    trails.forEach(provideInfo);
+}
+
+function provideInfo(trails) {
+    var 
 }
 
 function w3_open() {
