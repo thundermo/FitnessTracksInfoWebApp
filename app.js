@@ -19,10 +19,11 @@ fetch('data.json')
   .then(data => {
     // Store the data as an object
     tracksData = data;
-    console.log(tracksData);
+    console.log('inside loop:',tracksData);
     // Use the data as an object
   })
   .catch(error => console.error(error));
+  console.log('outside loop:',tracksData);
 
 /*  the append elements in html code:
     <div class="w3-third w3-container">
