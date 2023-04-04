@@ -12,7 +12,7 @@ function showDetail(id) {
 
 }
 
-var tracksData
+var tracksData;
 //read data.json
 fetch('data.json')
   .then(response => response.json())
@@ -23,8 +23,6 @@ fetch('data.json')
     // Use the data as an object
   })
   .catch(error => console.error(error));
-
-
 
 /*  the append elements in html code:
     <div class="w3-third w3-container">
@@ -39,13 +37,14 @@ fetch('data.json')
     </div>
 */
 //append track list block to html
-trackListIndex = 0;
+let trackListIndex = 0;
 tracksData.forEach(track => {  
   let div = document.createElement('div');
-  div.setAttribute('class' ,'w3-rest w3-container');
+  div.setAttribute('class' ,'w3-rest w3-container trackDiv');
+  div.setAttribute('id', 'track' + trackListIndex);
+  
 
   let trackDiv = document.createElement('div');
-  trackDiv.setAttribute('id', 'track' + trackListIndex);
   trackDiv.setAttribute('class' ,'w3-container w3-margin-bottom w3-sand');  
   
   let TrackDetailDiv = document.createElement('div');
@@ -93,3 +92,19 @@ tracksData.forEach(track => {
   
   trackListIndex++;
 });
+
+function selectDistrict(selectedDistrict){
+    if(selectedDistrict != 'all'){
+        let index = 0;
+        tracksData.District_en.forEach(trackDistrict => { 
+            if (trackDistrict != selectedDistrict){
+                document.getElementById('track'+Index).setAttribute('style','display:none;');
+            }
+            index++;
+        });
+    }else{
+        document.querySelectorAll('.trackDiv').forEach(div => {
+            div.style.display = 'none';
+        });
+    }
+}
