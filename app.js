@@ -12,6 +12,14 @@ function showDetail(id) {
 
 }
 
+//read data.json
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+
+
+
 
 /*  the append elements in html code:
     <div class="w3-third w3-container">
