@@ -16,7 +16,7 @@ function initialize() {
 }
 
 function displayTrails(trails) {
-    trails.forEach(provideInfo);
+    window.alert("HELLO WORLD");
 }
 
 function retrieveTrails() {
