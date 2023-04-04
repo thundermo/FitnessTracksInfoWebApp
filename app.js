@@ -38,8 +38,7 @@ fetch('data.json')
     </div>
 */
 //append track list block to html
-let trackListIndex = 0;
-tracksData.forEach(track => {  
+tracksData.forEach(track,trackListIndex => {  
   let div = document.createElement('div');
   div.setAttribute('class' ,'w3-rest w3-container trackDiv');
   div.setAttribute('id', 'track' + trackListIndex);
@@ -89,19 +88,15 @@ tracksData.forEach(track => {
   TrackDetailDiv.appendChild(img);  
   trackDiv.appendChild(TrackDetailDiv);
   div.appendChild(trackDiv)
-  document.getElementById('trackList').appendChild(div);  
-  
-  trackListIndex++;
+  document.getElementById('trackList').appendChild(div); 
 });
 
 function selectDistrict(selectedDistrict){
     if(selectedDistrict != 'all'){
-        let index = 0;
-        tracksData.District_en.forEach(trackDistrict => { 
+        tracksData.District_en.forEach(trackDistrict,i => { 
             if (trackDistrict != selectedDistrict){
-                document.getElementById('track'+Index).setAttribute('style','display:none;');
+                document.getElementById('track'+i).setAttribute('style','display:none;');
             }
-            index++;
         });
     }else{
         document.querySelectorAll('.trackDiv').forEach(div => {
