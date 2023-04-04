@@ -1,3 +1,6 @@
+const webPageLanguage = document.getElementById('language').className;
+console.log('language: '+webPageLanguage);
+
 function w3_open() {
     document.getElementById("Sidebar").style.display = "block";
     document.getElementById("Overlay").style.display = "block";
@@ -9,7 +12,6 @@ function w3_close() {
 }
 function showDetail(id) {
 	document.getElementById(id).style.display = (document.getElementById(id).style.display == 'none') ? "block" :"none";
-
 }
 
 //read data.json
@@ -24,61 +26,67 @@ if (request.status === 200) {
   console.error('Error:', request.status);
 }
 
-tracksData.forEach((track,trackListIndex) => {  
-let div = document.createElement('div');
-div.setAttribute('class' ,'w3-rest w3-container trackDiv');
-div.setAttribute('id', 'track' + trackListIndex);
+tracksData.forEach((track,trackListIndex) => {
+    //create elements and set attributes
+    let div = document.createElement('div');
+    div.setAttribute('class' ,'w3-rest w3-container trackDiv');
+    div.setAttribute('id', 'track' + trackListIndex);
 
+    let trackDiv = document.createElement('div');
+    trackDiv.setAttribute('class' ,'w3-container w3-margin-bottom w3-sand');  
 
-let trackDiv = document.createElement('div');
-trackDiv.setAttribute('class' ,'w3-container w3-margin-bottom w3-sand');  
+    let TrackDetailDiv = document.createElement('div');
+    TrackDetailDiv.setAttribute('id', 'trackDetail' + trackListIndex);
+    TrackDetailDiv.setAttribute('style', "display:none;");
 
-let TrackDetailDiv = document.createElement('div');
-TrackDetailDiv.setAttribute('id', 'trackDetail' + trackListIndex);
-TrackDetailDiv.setAttribute('style', "display:none;");
+    let showDetailArrow = document.createElement('button');
+    showDetailArrow.innerHTML = '˅ '; 
+    showDetailArrow.setAttribute('id', 'showDetailArrow' + trackListIndex);
+    showDetailArrow.setAttribute('class', 'text-like-btn');  
 
-let showDetailArrow = document.createElement('button');
-showDetailArrow.innerHTML = '˅ '; 
-showDetailArrow.setAttribute('id', 'showDetailArrow' + trackListIndex);
-showDetailArrow.setAttribute('class', 'text-like-btn');
+    let pTrackTile = document.createElement('p');    pTrackTile.setAttribute('herf', '#track' + trackListIndex);
+    pTrackTile.addEventListener('click', function(){
+        showDetail('trackDetail'+trackListIndex);
+        if  (document.getElementById('showDetailArrow' + trackListIndex).innerHTML == '˅ '){
+        document.getElementById('showDetailArrow' + trackListIndex).innerHTML = '˄ ';
+        document.getElementById('track' + trackListIndex).scrollIntoView({ behavior: 'smooth' });
+        }else{
+            document.getElementById('showDetailArrow' + trackListIndex).innerHTML = '˅ ';
+        };
+    });
 
-let pTrackTile = document.createElement('p');
-pTrackTile.setAttribute('herf', '#track' + trackListIndex);
-pTrackTile.addEventListener('click', function(){
-    showDetail('trackDetail'+trackListIndex);
-    if  (document.getElementById('showDetailArrow' + trackListIndex).innerHTML == '˅ '){
-    document.getElementById('showDetailArrow' + trackListIndex).innerHTML = '˄ ';
-    document.getElementById('track' + trackListIndex).scrollIntoView({ behavior: 'smooth' });
-    }else{
-        document.getElementById('showDetailArrow' + trackListIndex).innerHTML = '˅ ';
-    };
+    let bTrackTitle = document.createElement('b');
+    let pTrack = document.createElement('p');
+    let pTrackDetai = document.createElement('p');
+    let trackTitle;
+    let img = document.createElement('img');
+    img.style.width = '100%';
+    //change content base on the language selected
+    if (webPageLanguage == 'en'){
+        pTrack.innerHTML = track.Route_en;
+        pTrackDetai.innerHTML = track.HowToAccess_en;
+        trackTitle = document.createTextNode(track.Title_en);
+        img.src = track.MapURL_en;
+    }else if (webPageLanguage == 'tc'){
+        pTrack.innerHTML = track.Route_tc;
+        pTrackDetai.innerHTML = track.HowToAccess_tc;
+        trackTitle = document.createTextNode(track.Title_tc);
+        img.src = track.MapURL_tc;
+    }
+    //append the elements to the page
+    bTrackTitle.appendChild(showDetailArrow);
+    bTrackTitle.appendChild(trackTitle);
+    pTrackTile.appendChild(bTrackTitle);
+    trackDiv.appendChild(pTrackTile);
+    TrackDetailDiv.appendChild(pTrack);
+    TrackDetailDiv.appendChild(pTrackDetai);
+    TrackDetailDiv.appendChild(img);  
+    trackDiv.appendChild(TrackDetailDiv);
+    div.appendChild(trackDiv)
+    document.getElementById('trackList').appendChild(div); 
 });
 
-let bTrackTitle = document.createElement('b');
-
-let pTrack = document.createElement('p');
-pTrack.innerHTML = track.Route_en;
-
-let pTrackDetai = document.createElement('p');
-pTrackDetai.innerHTML = track.HowToAccess_en;
-
-let img = document.createElement('img');
-img.src = track.MapURL_en;
-img.style.width = '100%';
-bTrackTitle.appendChild(showDetailArrow);
-bTrackTitle.appendChild(document.createTextNode(track.Title_en));
-pTrackTile.appendChild(bTrackTitle);
-trackDiv.appendChild(pTrackTile);
-TrackDetailDiv.appendChild(pTrack);
-TrackDetailDiv.appendChild(pTrackDetai);
-TrackDetailDiv.appendChild(img);  
-trackDiv.appendChild(TrackDetailDiv);
-div.appendChild(trackDiv)
-document.getElementById('trackList').appendChild(div); 
-});
-
-
-  
+//control the display of the track div blocks 
 function selectDistrict(selectedDistrict){
     if (selectedDistrict != 'ALL'){
         tracksData.forEach((track,i) => {            

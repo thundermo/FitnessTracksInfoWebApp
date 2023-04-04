@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fitness Walking Tracks Web App</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<div id = "language" class="tc"></div>
+<body class="w3-light-grey w3-content" style="max-width:900px">
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-light-grey w3-animate-left" style="z-index:3;width:200px;" id="Sidebar"><br>
+
+  <div class="w3-bar-block">
+
+    <p class="w3-bar-item w3-padding"><b>地區</b><button onclick="w3_close()" class="w3-right text-like-btn" title="close side menu">x</button></p>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('ALL')">全部</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Southern')">南區</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Central and Western')">中西</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Wan Chai')">灣仔</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Eastern')">東區</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Sham Shui Po')">深水埗</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Yau Tsim Mong')">油尖旺</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Kwun Tong')">黃大仙</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Kowloon City')">觀塘</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Tai Po')">大埔</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Sai Kung')">西貢</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Sha Tin Distict')">沙田</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Tuen Mun')">屯門</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Yuen Long')">元朗</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('North')">北區</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Tsuen Wan')">荃灣</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Kwai Tsing<')">葵青</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Islands')">離島</button>
+
+    <p class="w3-bar-item w3-padding"><b>語言</b></p>
+    <button onclick="window.location.href='index.html';" class="w3-bar-item w3-button w3-padding">English</button>
+    <button onclick="window.location.href='index_zh.html';" class="w3-bar-item w3-button w3-padding">中文</button>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay  w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="Overlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="header">
+    <span class="w3-button w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container" style="position: relative;">
+    <h1><b>Fitness Walking Tracks</b></h1>
+    </div>
+  </header>
+</div>
+
+<div id="trackList" style ="overflow-y: scroll; height: 75vh">
+
+</div>
+
+</div>
+</body>
+
+
+<!-- js file-->
+<script src="app.js"></script>
+
+
+</body>
+</html>

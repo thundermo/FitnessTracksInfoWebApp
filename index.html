@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="style.css">
 
 </head>
+<div id = "language" class="en"></div>
 <body class="w3-light-grey w3-content" style="max-width:900px">
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-light-grey w3-animate-left" style="z-index:3;width:200px;" id="Sidebar"><br>
@@ -20,7 +21,7 @@
   <div class="w3-bar-block">
 
     <p class="w3-bar-item w3-padding"><b>District</b><button onclick="w3_close()" class="w3-right text-like-btn" title="close side menu">x</button></p>
-    <button class="w3-bar-item w3-button w3-padding w3-text-teal" onclick="w3_close(),selectDistrict('ALL')">ALL</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('ALL')">ALL</button>
     <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Southern')">Southern</button>
     <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Central and Western')">Central and Western</button>
     <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Wan Chai')">Wan Chai</button>
@@ -31,7 +32,7 @@
     <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Kowloon City')">Kowloon City</button>
     <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Tai Po')">Tai Po</button>
     <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Sai Kung')">Sai Kung</button>
-    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Sha Tin Distict')">Sha Tin Distict</button>
+    <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Sha Tin Distict')">Sha Tin</button>
     <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Tuen Mun')">Tuen Mun</button>
     <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Yuen Long')">Yuen Long</button>
     <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('North')">North</button>
@@ -40,8 +41,8 @@
     <button class="w3-bar-item w3-button w3-padding" onclick="w3_close(),selectDistrict('Islands')">Islands</button>
 
     <p class="w3-bar-item w3-padding"><b>Language</b></p>
-    <button class="w3-bar-item w3-button w3-padding w3-text-teal">English</button>
-    <button class="w3-bar-item w3-button w3-padding">中文</button>
+    <button onclick="window.location.href='index.html';" class="w3-bar-item w3-button w3-padding">English</button>
+    <button onclick="window.location.href='index_zh.html';" class="w3-bar-item w3-button w3-padding">中文</button>
   </div>
 </nav>
 
