@@ -71,16 +71,16 @@ tracksData.forEach(track => {
   let bTrackTitle = document.createElement('b');
   
   let pTrack = document.createElement('p');
-  pTrack.innerHTML = 'Total Track Length: 1200 m<br>Calories consumed: 50-60 Cal';
+  pTrack.innerHTML = Route_en;
   
   let pTrackDetai = document.createElement('p');
-  pTrackDetai.innerHTML = 'MTR: Lei Tung Station Exit A1<br>Bus: 90, 90B, 90C, 91, 91A, 93, 93C, 95C, 95P, 95, 99, 171, 590, 592, 595, 671<br>Public Light Bus: 27, 27A, 29, 29A, 36, 36X, 37, 37A, 63';
+  pTrackDetai.innerHTML = track.HowToAccess_en;
 
   let img = document.createElement('img');
-  img.src = 'https://www.lcsd.gov.hk/en/sportforall/common/graphics/en/walk/map_01.jpg';
+  img.src = track.MapURL_en;
   img.style.width = '100%';
   bTrackTitle.appendChild(showDetailArrow);
-  bTrackTitle.appendChild(document.createTextNode('Ap Lei Chau Wind Tower Park test'));
+  bTrackTitle.appendChild(document.createTextNode(track.Title_en));
   pTrackTile.appendChild(bTrackTitle);
   trackDiv.appendChild(pTrackTile);
   TrackDetailDiv.appendChild(pTrack);
