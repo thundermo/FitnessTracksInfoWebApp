@@ -3,7 +3,7 @@
 
 function initialize() {
     if (navigator.onLine) {
-        retrieveContacts();
+        retrieveTrails();
     } else {
         const localStorage = window.localStorage;
         if (localStorage) {
@@ -19,8 +19,24 @@ function displayTrails(trails) {
     trails.forEach(provideInfo);
 }
 
-function provideInfo(trails) {
-    var 
+function retrieveTrails() {
+	const request = new XMLHttpRequest();
+	const url = "data.json";
+	
+	request.onreadystatechange = function() {
+		if (request.readyState === 4) {
+			var trails = JSON.parse(request.response).trails;
+			displayTrails(trails);
+			
+			const localStorage = window.localStorage;
+            		if (localStorage) {
+                		localStorage.setItem("trails", JSON.stringify(trails));
+			}
+		}
+	};
+	
+	request.open("get", url);
+	request.send();
 }
 
 function w3_open() {
@@ -34,18 +50,6 @@ function w3_close() {
 }
 function showDetail(id) {
 	document.getElementById(id).style.display = (document.getElementById(id).style.display == 'none') ? "block" :"none";
-}
-
-//read data.json
-const request = new XMLHttpRequest();
-request.open('GET', 'data.json', false); 
-request.send(null);
-
-if (request.status === 200) {
-  var tracksData = JSON.parse(request.responseText);
-  console.log(tracksData);
-} else {
-  console.error('Error:', request.status);
 }
 
 tracksData.forEach((track,trackListIndex) => {
