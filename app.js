@@ -12,7 +12,7 @@ function showDetail(id) {
 
 }
 
-var tracksData;
+let tracksData;
 //read data.json
 fetch('data.json')
   .then(response => response.json())
