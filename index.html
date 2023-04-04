@@ -11,21 +11,30 @@
 <link rel="stylesheet" href="style.css">
 
 </head>
-<body class="w3-light-grey w3-content" style="max-width:1600px">
-
+<body class="w3-light-grey w3-content" style="max-width:900px">
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div class="w3-container">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-      <i class="fa fa-remove"></i>
-    </a>
-    <h4><b>PORTFOLIO</b></h4>
-    <p class="w3-text-grey">Template by W3.CSS</p>
-  </div>
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="Sidebar"><br>
+
   <div class="w3-bar-block">
-    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> 
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+    <p class="w3-bar-item w3-padding"><b>District</b><button onclick="w3_close()" class="w3-right text-like-btn" title="close side menu">🗙</button></p>
+    <button class="w3-bar-item w3-button w3-padding w3-text-teal">ALL</button>
+    <button class="w3-bar-item w3-button w3-padding">Southern</button>
+    <button class="w3-bar-item w3-button w3-padding">Central and Western</button>
+    <button class="w3-bar-item w3-button w3-padding">Wan Chai</button>
+    <button class="w3-bar-item w3-button w3-padding">Eastern</button>
+    <button class="w3-bar-item w3-button w3-padding">Sham Shui Po</button>
+    <button class="w3-bar-item w3-button w3-padding">Yau Tsim Mong</button>
+    <button class="w3-bar-item w3-button w3-padding">Kwun Tong</button>
+    <button class="w3-bar-item w3-button w3-padding">Kowloon City</button>
+    <button class="w3-bar-item w3-button w3-padding">Tai Po</button>
+    <button class="w3-bar-item w3-button w3-padding">Sai Kung</button>
+    <button class="w3-bar-item w3-button w3-padding">Sha Tin Distict</button>
+    <button class="w3-bar-item w3-button w3-padding">Tuen Mun</button>
+    <button class="w3-bar-item w3-button w3-padding">Yuen Long</button>
+    <button class="w3-bar-item w3-button w3-padding">North</button>
+    <button class="w3-bar-item w3-button w3-padding">Tsuen Wan</button>
+    <button class="w3-bar-item w3-button w3-padding">Kwai Tsing</button>
+    <button class="w3-bar-item w3-button w3-padding">Islands</button>
   </div>
   <div class="w3-panel w3-large">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -38,39 +47,24 @@
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="w3-overlay  w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="Overlay"></div>
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px">
 
   <!-- Header -->
-  <header id="portfolio">
-    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <div class="w3-container">
+  <header id="header">
+    <span class="w3-button w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container" style="position: relative;">
     <h1><b>Fitness Walking Tracks</b></h1>
-    <div class="w3-section w3-bottombar w3-padding-16">
-      <span class="w3-margin-right">District:</span>
-      <button class="w3-button w3-black">ALL</button>
-      <button class="w3-button w3-white">Southern</button>
-      <button class="w3-button w3-white">Central and Western</button>
-      <button class="w3-button w3-white">Wan Chai</button>
-      <button class="w3-button w3-white">Eastern</button>
-      <button class="w3-button w3-white">Sham Shui Po</button>
-      <button class="w3-button w3-white">Yau Tsim Mong</button>
-      <button class="w3-button w3-white">Kwun Tong</button>
-      <button class="w3-button w3-white">Kowloon City</button>
-      <button class="w3-button w3-white">Tai Po</button>
-      <button class="w3-button w3-white">Sai Kung</button>
-      <button class="w3-button w3-white">Sha Tin Distict</button>
-      <button class="w3-button w3-white">Tuen Mun</button>
-      <button class="w3-button w3-white">Yuen Long</button>
-      <button class="w3-button w3-white">North</button>
-      <button class="w3-button w3-white">Tsuen Wan</button>
-      <button class="w3-button w3-white">Kwai Tsing</button>
-      <button class="w3-button w3-white">Islands</button>
-    </div>
     </div>
   </header>
+</div>
+
+<div id="trackList" style ="overflow-y: scroll; height: 80vh">
+
+</div>
+
 </div>
 </body>
 

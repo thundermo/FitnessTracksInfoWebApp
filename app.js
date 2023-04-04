@@ -1,21 +1,22 @@
 function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
+    document.getElementById("Sidebar").style.display = "block";
+    document.getElementById("Overlay").style.display = "block";
 }
  
 function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
+    document.getElementById("Sidebar").style.display = "none";
+    document.getElementById("Overlay").style.display = "none";
 }
 function showDetail(id) {
 	document.getElementById(id).style.display = (document.getElementById(id).style.display == 'none') ? "block" :"none";
 
 }
 
+
 /*  the append elements in html code:
     <div class="w3-third w3-container">
       <div id="'track' + trackListIndex" class="w3-container w3-margin-bottom w3-white">
-        <p><b>Ap Lei Chau Wind Tower Park <button  onclick="showDetail('trackDetail'+trackListIndex)" style="float:right;top:0%;">detail</button></b></p> 
+        <p><b> <button>˅ </button> Ap Lei Chau Wind Tower Park </p> 
         <div id="'trackDetail'+trackListIndex" style="display:none;">
           <p>Total Track Length: 1200 m<br>Calories consumed: 50-60 Cal</p>
           <p>MTR: Lei Tung Station Exit A1<br>Bus: 90, 90B, 90C, 91, 91A, 93, 93C, 95C, 95P, 95, 99, 171, 590, 592, 595, 671<br>Public Light Bus: 27, 27A, 29, 29A, 36, 36X, 37, 37A, 63</p>
@@ -25,10 +26,10 @@ function showDetail(id) {
     </div>
 */
 //append track list block to html
-for(let trackListIndex=0;trackListIndex<9;trackListIndex++){
+for(let trackListIndex=0;trackListIndex<20;trackListIndex++){
 
   let div = document.createElement('div');
-  div.setAttribute('class' ,'w3-third w3-container');
+  div.setAttribute('class' ,'w3-rest w3-container');
 
   let trackDiv = document.createElement('div');
   trackDiv.setAttribute('id', 'track' + trackListIndex);
@@ -38,18 +39,22 @@ for(let trackListIndex=0;trackListIndex<9;trackListIndex++){
   TrackDetailDiv.setAttribute('id', 'trackDetail' + trackListIndex);
   TrackDetailDiv.setAttribute('style', "display:none;");
   
+  let showDetailArrow = document.createElement('button');
+  showDetailArrow.innerHTML = '˅ '; 
+  showDetailArrow.setAttribute('id', 'showDetailArrow' + trackListIndex);
+  showDetailArrow.setAttribute('class', 'text-like-btn');
+ 
+  let pTrackTile = document.createElement('p');
+  pTrackTile.setAttribute('herf', '#track' + trackListIndex);
+  pTrackTile.addEventListener('click', function(){
+    showDetail('trackDetail'+trackListIndex);
+    document.getElementById('showDetailArrow' + trackListIndex).innerHTML = (document.getElementById('showDetailArrow' + trackListIndex).innerHTML == '˅ ')?'˄ ':'˅ ';
+    document.getElementById('track' + trackListIndex).scrollIntoView({ behavior: 'smooth' });
+  });
+
+  let bTrackTitle = document.createElement('b');
+
   
-  let p = document.createElement('p');
-  let b = document.createElement('b');
-  
-  let button = document.createElement('button');
-  button.innerHTML = '˅ '; 
-  button.setAttribute('id', 'showDetailBtn' + trackListIndex);
-  button.setAttribute('class', 'detail-btn')
-  button.addEventListener('click', function(){
-            showDetail('trackDetail'+trackListIndex);
-            document.getElementById('showDetailBtn' + trackListIndex).innerHTML = (document.getElementById('showDetailBtn' + trackListIndex).innerHTML == '˅ ')?'˄ ':'˅ ';
-          });
   
   let pTrack = document.createElement('p');
   pTrack.innerHTML = 'Total Track Length: 1200 m<br>Calories consumed: 50-60 Cal';
@@ -60,15 +65,15 @@ for(let trackListIndex=0;trackListIndex<9;trackListIndex++){
   let img = document.createElement('img');
   img.src = 'https://www.lcsd.gov.hk/en/sportforall/common/graphics/en/walk/map_01.jpg';
   img.style.width = '100%';
-  b.appendChild(button);
-  b.appendChild(document.createTextNode('Ap Lei Chau Wind Tower Park test'));
-  p.appendChild(b);
+  bTrackTitle.appendChild(showDetailArrow);
+  bTrackTitle.appendChild(document.createTextNode('Ap Lei Chau Wind Tower Park test'));
+  pTrackTile.appendChild(bTrackTitle);
   TrackDetailDiv.appendChild(pTrack);
   TrackDetailDiv.appendChild(pTrackDetai);
   TrackDetailDiv.appendChild(img);
-  p.appendChild(TrackDetailDiv);
-  trackDiv.appendChild(p);
+  pTrackTile.appendChild(TrackDetailDiv);
+  trackDiv.appendChild(pTrackTile);
   div.appendChild(trackDiv)
-  document.body.appendChild(div);  
+  document.getElementById('trackList').appendChild(div);  
   
 }
