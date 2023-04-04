@@ -1,5 +1,5 @@
-//const webPageLanguage = document.getElementById('language').className;
-//console.log('language: '+webPageLanguage);
+const webPageLanguage = document.getElementById('language').className;
+console.log('language: '+ webPageLanguage);
 
 function initialize() {
     if (navigator.onLine) {
