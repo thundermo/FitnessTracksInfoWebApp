@@ -14,6 +14,11 @@ function showDetail(id) {
 	document.getElementById(id).style.display = (document.getElementById(id).style.display == 'none') ? "block" :"none";
 }
 
+function herfGoogleMap(location){
+    let googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`;
+    window.open(googleMapsLink, "_blank");
+};
+
 //read data.json
 const request = new XMLHttpRequest();
 request.open('GET', 'data.json', false); 
@@ -44,8 +49,9 @@ tracksData.forEach((track,trackListIndex) => {
     showDetailArrow.setAttribute('id', 'showDetailArrow' + trackListIndex);
     showDetailArrow.setAttribute('class', 'text-like-btn');  
 
-    let pTrackTile = document.createElement('p');    pTrackTile.setAttribute('herf', '#track' + trackListIndex);
-    pTrackTile.addEventListener('click', function(){
+    let pTrackTitle = document.createElement('p');    
+    pTrackTitle.setAttribute('herf', '#track' + trackListIndex);
+    pTrackTitle.addEventListener('click', function(){
         showDetail('trackDetail'+trackListIndex);
         if  (document.getElementById('showDetailArrow' + trackListIndex).innerHTML == '˅ '){
         document.getElementById('showDetailArrow' + trackListIndex).innerHTML = '˄ ';
@@ -55,33 +61,54 @@ tracksData.forEach((track,trackListIndex) => {
         };
     });
 
+    let btnGoogleMapURL = document.createElement('button');
+    btnGoogleMapURL.setAttribute('class', 'text-like-btn');
+    btnGoogleMapURL.setAttribute('style', 'color:blue; text-decoration: underline; font-size: 100%');
+
     let bTrackTitle = document.createElement('b');
-    let pTrack = document.createElement('p');
-    pTrack.setAttribute('style','font-weight: bold')
-    let pTrackDetai = document.createElement('p');
+    let pTrackDistrict = document.createElement('p');
+    pTrackDistrict.setAttribute('style','font-weight: bold; font-size: 110%')
+    let pHowToAccess = document.createElement('p');
     let trackTitle;
-    let img = document.createElement('img');
-    img.style.width = '100%';
+    let mapImg = document.createElement('img');
+    mapImg.style.width = '100%';
+    let trackPhoto = document.createElement('img');
+    trackPhoto.style.width = '100%';
+    trackPhoto.src = track.Image;
     //change content base on the language selected
     if (webPageLanguage == 'en'){
-        pTrack.innerHTML = track.District_en;
-        pTrackDetai.innerHTML = track.HowToAccess_en;
+        pTrackDistrict.innerHTML = track.District_en;
+        pHowToAccess.innerHTML = track.HowToAccess_en;
         trackTitle = document.createTextNode(track.Title_en);
-        img.src = track.MapURL_en;
+        mapImg.src = track.MapURL_en;
+        btnGoogleMapURL.addEventListener('click', function(){
+            herfGoogleMap(track.Title_en);
+        });
+        btnGoogleMapURL.innerHTML = "google map"
+        btnGoogleMapURL.addEventListener('click', function(){
+            herfGoogleMap(track.Title_en);
+        });
     }else if (webPageLanguage == 'tc'){
-        pTrack.innerHTML = track.District_tc;
-        pTrackDetai.innerHTML = track.HowToAccess_tc;
+        pTrackDistrict.innerHTML = track.District_tc;
+        pHowToAccess.innerHTML = track.HowToAccess_tc;
         trackTitle = document.createTextNode(track.Title_tc);
-        img.src = track.MapURL_tc;
+        mapImg.src = track.MapURL_tc;        
+        btnGoogleMapURL.innerHTML = "google地圖"
+        btnGoogleMapURL.addEventListener('click', function(){
+            herfGoogleMap(track.Title_tc);
+        });
     }
+    
     //append the elements to the page
     bTrackTitle.appendChild(showDetailArrow);
     bTrackTitle.appendChild(trackTitle);
-    pTrackTile.appendChild(bTrackTitle);
-    trackDiv.appendChild(pTrackTile);
-    TrackDetailDiv.appendChild(pTrack);
-    TrackDetailDiv.appendChild(pTrackDetai);
-    TrackDetailDiv.appendChild(img);  
+    pTrackTitle.appendChild(bTrackTitle);
+    trackDiv.appendChild(pTrackTitle);
+    TrackDetailDiv.appendChild(trackPhoto);
+    TrackDetailDiv.appendChild(pTrackDistrict);
+    TrackDetailDiv.appendChild(pHowToAccess);
+    TrackDetailDiv.appendChild(btnGoogleMapURL);
+    TrackDetailDiv.appendChild(mapImg);  
     trackDiv.appendChild(TrackDetailDiv);
     div.appendChild(trackDiv)
     document.getElementById('trackList').appendChild(div); 
@@ -104,22 +131,3 @@ function selectDistrict(selectedDistrict){
     }          
 }
 
-//search function
-/*
-function searchTrack(){
-
-    if (selectedDistrict != 'ALL'){
-        tracksData.forEach((track,i) => {            
-            if (track.District_en != selectedDistrict){
-                document.getElementById('track'+i).setAttribute('style','display:none;');
-            }else{
-                document.getElementById('track'+i).setAttribute('style','display:block;');
-            }
-        });
-    }else{
-        tracksData.forEach((track,i) => {
-            document.getElementById('track'+i).setAttribute('style','display:block;');
-        })
-    }          
-}
-*/
